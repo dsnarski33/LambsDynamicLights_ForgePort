@@ -1,0 +1,30 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "llamastein.lambdynforge.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "lambdynforge.refmap.json",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+
+  ],
+  "client": [
+    "BlockEntityTypeMixin",
+    "ClientWorldMixin",
+    "CommonWorldRendererMixin",
+    "EntityTypeMixin",
+    "EntityRendererMixin",
+    "MinecraftClientMixin",
+    "WorldMixin",
+    "lightsource.AbstractDecorationEntityMixin",
+    "lightsource.AbstractMinecartEntityMixin",
+    "lightsource.BlockEntityMixin",
+    "lightsource.EntityMixin",
+    "lightsource.ExplosiveProjectileEntityMixin",
+    "lightsource.LivingEntityMixin",
+    "lightsource.PlayerEntityMixin",
+    "lightsource.TntEntityMixin"
+  ]
+}
