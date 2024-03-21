@@ -114,7 +114,7 @@ public abstract class ItemLightSource {
 		} else if (luminanceElement.isString()) {
 			var luminanceStr = luminanceElement.getAsString();
 			// custom addition for itemstack->tag usage
-			if(luminanceStr.equals(TagItemLightSource.INTENSITY_DYNAMIC)) {
+			if(luminanceStr.equals(TagItemLightSource.DYN_BRIGHT)) {
 				return Optional.of(new TagItemLightSource(id, item, waterSensitive));
 			} else if (luminanceStr.equals("block")) {
 				if (item instanceof BlockItem blockItem) {
@@ -157,7 +157,7 @@ public abstract class ItemLightSource {
 
 	// custom addition for itemstack->tag usage
 	public static class TagItemLightSource extends ItemLightSource {
-		public static final String INTENSITY_DYNAMIC = "IntensityDynamic";
+		public static final String DYN_BRIGHT = "DynBright";
 		public TagItemLightSource(ResourceLocation id, Item item, boolean waterSensitive) {
 			super(id, item, waterSensitive);
 		}
@@ -165,7 +165,7 @@ public abstract class ItemLightSource {
 		public int getLuminance(ItemStack stack) {
 			CompoundTag tag = stack.getTag();
 			assert tag != null;
-			int value = tag.getInt(INTENSITY_DYNAMIC);
+			int value = tag.getInt(DYN_BRIGHT);
 			assert value >= 0 && value <= 15;
 			return value;
 		}

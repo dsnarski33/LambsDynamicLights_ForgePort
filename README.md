@@ -10,7 +10,7 @@ a config file. I also added support for an ItemStack tag lighting mode. This tag
 expected to be on the ItemStack as an integer in the 0 to 15 range. It is modeled
 after the BlockItem mode in the json setup, where instead you would use:
 ```
-"luminance": "IntensityDynamic"
+"luminance": "DynBright"
 ```
 
 [^1]: See: see https://github.com/TerraFirmaCraft/TerraFirmaCraft or https://www.curseforge.com/minecraft/mc-mods/terrafirmacraft
